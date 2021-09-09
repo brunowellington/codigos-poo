@@ -8,39 +8,39 @@ public class DemoCartao {
 	public static void main(String[] args) {
 		Calendar calendario = Calendar.getInstance();
 		int ano = calendario.get(Calendar.YEAR);
-		int mes = calendario.get(Calendar.MONTH);
-		Scanner sc =  new Scanner(System.in);
+		int mes = 1+calendario.get(Calendar.MONTH);
+		Scanner sc = new Scanner(System.in);
 		String nome;
 		int numero;
 		int codigo;
 		int anoValidade = -1;
-		int mesValidade = -1;
+		int mesValidade;
 		
-		System.out.println("Formulario de cadastrado de cartao");
+		System.out.println("Formulario de cadastro de cartao");
 		
 		System.out.print("Nome: ");
 		nome = sc.next();
 		
-		System.out.println("Numero: ");
+		System.out.print("Numero: ");
 		numero = sc.nextInt();
 		
-		System.out.println("Codigo ");
+		System.out.print("Codigo: ");
 		codigo = sc.nextInt();
-		
-		while(anoValidade < ano) {
-			System.out.println("Ano da validade: ");
+
+		while (anoValidade < ano) {
+			System.out.print("Ano da Validade: ");
 			anoValidade = sc.nextInt();
 			if (anoValidade < ano) {
 				System.out.println("Ano invalido");
 			}
 		}
 
-		while(mesValidade < mes) {
-			System.out.println("Mes da validade: ");
+		System.out.print("Mes da Validade: ");
+		mesValidade = sc.nextInt();
+		while ((anoValidade==ano) && (mesValidade < mes)) {
+			System.out.println("Mes invalido");
+			System.out.print("Mes da Validade: ");
 			mesValidade = sc.nextInt();
-			if (mesValidade < mes) {
-				System.out.println("Mes invalido");
-			}
 		}
 		
 		Cartao ufersaCard = new Cartao(nome, numero, codigo, anoValidade, mesValidade);
