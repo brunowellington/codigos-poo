@@ -1,11 +1,11 @@
 package cartao;
 
 public class Cartao {
-	String nome;
-	int numero;
-	int codigo;
-	int anoValidade;
-	int mesValidade;
+	private String nome;
+	private int numero;
+	private int codigo;
+	private int anoValidade;
+	private int mesValidade;
 	
 	public Cartao(String nome, int numero, int codigo, int anoValidade, int mesValidade) {
 		this.nome = nome;

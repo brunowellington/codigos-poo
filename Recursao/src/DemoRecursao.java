@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class DemoRecursao {
-	public static int NUMTESTS = 11;
+	public final int NUMTESTS = 11;
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

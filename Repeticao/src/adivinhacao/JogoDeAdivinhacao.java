@@ -10,7 +10,7 @@ public class JogoDeAdivinhacao {
 	}
 	
 	public void jogar() {
-		int tentativas = 20;
+		final int tentativas = 20;
 		int contador = 1;
 		int estaTentativa;
 		Scanner sc = new Scanner(System.in);
@@ -18,7 +18,7 @@ public class JogoDeAdivinhacao {
 		System.out.println("Tente adivinhar o numero secreto em " + tentativas + " tentativas");
 		
 		do {
-			System.out.print("Tentantiva numero " + contador + ": ");
+			System.out.print("Tentativa numero " + contador + ": ");
 			estaTentativa = sc.nextInt();
 			if (estaTentativa == this.valor) {
 				System.out.println("Parabens! Voce acertou o numero!");

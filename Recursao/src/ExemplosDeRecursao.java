@@ -9,7 +9,7 @@ public class ExemplosDeRecursao {
 	}
 
 	public static int fibItera(int n) {
-		int m1 = 1, m2 = 0, resp = 0;
+		int m1 = 1, m2 = 0, resp=0;
 		if (n < 2) return n;
 		for (int i = 2; i <= n; i++) {
 			resp = m1 + m2;

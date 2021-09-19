@@ -4,7 +4,7 @@ public class ProbabilidadeBasica {
 	public static long fatorial(long val) {
 		long fatorial = 1;
 		for(long i=1;i<=val;i++) {
-			fatorial = fatorial*i;
+			fatorial *= i;
 		}
 		return fatorial;
 	}
